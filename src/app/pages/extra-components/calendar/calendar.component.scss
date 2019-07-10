@@ -1,0 +1,54 @@
+
+@import '../../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+
+    /deep/ .charts {
+        display: block;
+        height: 450px;
+        width: 100%;
+      }
+
+      ngx-ecommerce-charts{
+      /deep/ ngx-chart-panel-header{
+          padding: 0px;
+      }
+       
+      /deep/ nb-card{
+        height: 96%;
+        
+      }
+      /deep/ ngx-chart-panel-header ngx-legend-chart .legends div {
+        margin-left: 0;
+      }
+    }
+   
+}
+
+.logContent img{
+width: 100%
+}
+.seller-name{
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 4px;
+  margin: 20px 0 20px 0;
+}
+.whisky-img{
+  // width: 200px;
+    height: 200px;
+}
+.whisky-img img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.upcoming-sale, .header-macallan{
+  background-color: #fff;
+}
+.upcoming-sale .head{
+  padding: 5px;
+}

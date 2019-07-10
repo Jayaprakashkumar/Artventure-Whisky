@@ -1,0 +1,149 @@
+<div class="row">
+  <div class="col-3 side-nav">
+    <div class="row checkbox-div">
+      <h6 class="pb-10">Ways to buy</h6>
+      <div class="col-12 brB mb-10">
+        <ul>
+          <li>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="checkboxText">Buy now</span></label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="checkboxText">Make offer</span></label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="checkboxText">Bid</span></label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox">
+              <label><input type="checkbox" value=""><span class="checkboxText">Inquire</span></label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row checkbox-div">
+      <h6 class="pb-10">Medium</h6>
+      <div class="col-12 brB mb-10">
+        <ul>
+          <li>
+            <div class="radio">
+              <label><input type="radio" value=""><span class="checkboxText">Photography</span></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" value=""><span class="checkboxText">Sculpture</span></label>
+            </div>
+          </li>
+          <li>
+            <div class="radio">
+              <label><input type="radio" value=""><span class="checkboxText">Installation</span></label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row checkbox-div">
+        <h6 class="pb-10">Price</h6>
+      <div class="col-12 brB mb-10 pb-30">
+        <ng5-slider [(value)]="value" [options]="options"></ng5-slider>
+      </div>
+    </div>
+  </div>
+  <div class="col-9 side-nav-list">
+    <div class="row search-bar clearfix">
+      <div class="form-group mL-81">
+        <select name="search" class="form-control" id="serachbar" [(ngModel)]="serachvalue" (change)="searchOnChange()"
+          [value]="Default">
+          <option [value]="x.value" *ngFor="let x of searchOption">
+            {{x.value}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 mb-30" *ngFor="let whisky of whiskyDataCopy">
+        <div class=" upcoming-sale">
+          <div>
+            <span class="text-left p-1">Macallan</span>
+          </div>
+
+          <div class="whisky-img">
+            <img src="{{whisky.img}}" alt="macallan whisky" class="image-responsive" height="100%">
+          </div>
+          <div>
+            <h4 class="text-center">{{whisky.name}}</h4>
+            <h6 class="text-center">Seller name</h6>
+
+            <h5 class="text-center seller-name">Date: {{whisky.data}}</h5>
+            <h6 class="text-center">Price: {{whisky.price}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
+      <h1>EXHIBITIONS</h1>
+</div>
+<div class="mb-4" *ngFor="let details of exhibiton_Details">
+    <p>{{details.name}}</p>
+    <p>{{details.place}}</p>
+    <p>{{details.date}}</p>
+</div> -->

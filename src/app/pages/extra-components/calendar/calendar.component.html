@@ -1,0 +1,162 @@
+<div class="header-macallan row">
+  <div class="logo col-xs-3 col-md-3">
+
+    <div class="logContent">
+      <img src="../../../../assets/images/macallan.png" alt="Macallan logo" class="image-responsive">
+    </div>
+  </div>
+  <div class="Title col-xs-9 col-md-9">
+    <h1>Macallan Overview</h1>
+    <p><span><i class="fas fa-wine-bottle"></i></span></p>
+    <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis, massa sed
+      rutrum efficitur, velit enim aliquam tellus, ut ultrices felis metus nec velit. Aenean at accumsan lacus, at
+      iaculis sem. In laoreet vulputate nulla sit amet pharetra. Aliquam commodo blandit dolor non tincidunt. Maecenas
+      nisi erat, interdum sit amet fringilla at, suscipit a mi. Integer at libero sit amet sem finibus blandit egestas
+      vel odio. Nulla imperdiet tortor felis, in pharetra felis consectetur sed. Maecenas commodo fermentum quam. Proin
+      lacus ipsum, finibus eget convallis non, auctor laoreet lorem. Quisque bibendum, metus at efficitur malesuada,
+      nisi elit tempor libero, at ultrices velit massa at felis. Vestibulum congue orci vel nunc malesuada, vel maximus
+      arcu dignissim. Curabitur molestie nisi ac aliquam gravida. Integer euismod dignissim malesuada. Nam eu sodales
+      nibh. Vivamus sit amet felis pellentesque, hendrerit risus eu, aliquam metus. Aenean ac vulputate justo, at
+      convallis dolor.</p>
+  </div>
+</div>
+<div class="row data-visual mt-5 graph">
+  <div class="col-xs-6 col-md-6">
+    <nb-card>
+      <nb-card-header>Price Evolution per cm²</nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-multiple-xaxis [graphData]="avgHammerPriceData" [dataList]="avgHammerPriceList">
+        </ngx-echarts-multiple-xaxis>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-xs-6 col-md-6 ecommer-chart">
+    <ngx-ecommerce-charts></ngx-ecommerce-charts>
+  </div>
+</div>
+
+<div class="row mt-5 ">
+  <div class="col-xs-6 col-md-6">
+      <nb-card>
+          <nb-card-header>SELL VOLUME</nb-card-header>
+          <nb-card-body>
+            <ngx-echarts-area-stack></ngx-echarts-area-stack>
+          </nb-card-body>
+        </nb-card>
+  </div>
+  <div class="col-xs-6 col-md-6">
+      <nb-card>
+          <nb-card-header>PRODUCTION YEAR</nb-card-header>
+          <nb-card-body>
+            <ngx-echarts-bar-animation [graphData]="productionYrData" [graphDataList]="prodYrList">
+            </ngx-echarts-bar-animation>
+          </nb-card-body>
+        </nb-card>
+  </div>
+</div>
+
+<h4 class="text-left">Upcoming Sales</h4>
+<div class="row">
+  <div class="col-xs-6 col-md-6" *ngFor="let whisky of whiskyData">
+    <div class=" upcoming-sale">
+      <div>
+          <span class="text-left p-1">Macallan</span>
+      </div>
+   
+    <div class="whisky-img">
+        <img src="{{whisky.img}}" alt="macallan whisky" class="image-responsive"  height="100%">
+    </div>
+    <div>
+        <h4 class="text-center">{{whisky.name}}</h4>
+        <h6 class="text-center">Seller name</h6>
+    
+        <h5 class="text-center seller-name">Date: {{whisky.data}}</h5>
+        <h6 class="text-center">Price: {{whisky.price}}</h6>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+  <h1>ARTIST INTRODUCTION</h1>
+</div>
+
+<div class="row">
+  <div class="image-content col">
+    <h2>Image</h2>
+  </div>
+
+  <div class="col">
+    <p>
+      Born in Brooklyn, New York in 1927, Alex Katz was raised by his Russian émigré parents, both of whom were
+      interested in poetry and the arts. He studied at The Cooper Union Art School in Manhattan from 1946 to 1949 and at
+      the Skowhegan School of Painting and Sculpture in Maine from 1949 to 1950. During his years at Cooper Union, Katz
+      had been exposed primarily to modern art and was taught to paint from drawings. Skowhegan encouraged him to paint
+      from life, which would prove pivotal in his development as a painter and remains a staple of his practices today.
+    </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p>Katz’s first one-person show was held at the Roko Gallery in 1954. Since then, his work has been the subject of
+      more than 200 solo exhibitions and nearly 500 group exhibitions internationally. He has been honoured with
+      numerous retrospectives at museums including the Whitney Museum of American Art, New York; Brooklyn Museum, New
+      York; the Jewish Museum, New York; the Irish Museum of Modern Art, Dublin; Colby College Museum of Art, Maine and
+      the Saatchi Gallery, London.</p>
+  </div>
+  <div class="col">
+    <p>Works by Alex Katz can be found in over 100 public collections worldwide. Most notably, those in America include:
+      The Art Institute of Chicago; The Brooklyn Museum; Carnegie Museum of Art, Pittsburgh; Des Moines Art Center; The
+      Los Angeles County Museum of Art; The Metropolitan Museum of Art, New York; The Museum of Fine Arts, Boston; The
+      Museum of Modern Art, New York; The National Gallery of Art, Washington, D.C.; National Museum of American Art,
+      Smithsonian Institute; Philadelphia Museum of Art; and The Whitney Museum of American Art, New York. </p>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <p>Katz has received numerous accolades throughout his career. Most recently, he was the honored artist in the
+      Chicago Humanities Festival’s Inaugural Richard Gray Annual Visual Arts Series in 2005, and received a Lifetime
+      Achievement Award from the National Academy Museum, New York in 2007. He has two Honorary Doctorate degrees from
+      Colby College (1984) and Colgate University (2005).</p>
+  </div>
+  <div class="image-content col">
+    <h2>Image</h2>
+  </div>
+</div>
+ -->

@@ -1,0 +1,41 @@
+[
+    {
+      "img": "../../../../assets/images/whisky1.jpg",
+      "name": "Macallan Wisky 1",
+      "year": "25 Aug 2019",
+      "price": "$ 2500"
+    },
+
+    {
+      "img": "../../../../assets/images/whisky2.jpg",
+      "name": "Macallan Wisky 2",
+      "year": "14 May 2019",
+      "price": "$ 14,000"
+    },
+
+    {
+      "img": "../../../../assets/images/whisky3.jpg",
+      "name": "Macallan Wisky 3",
+      "year": "8 June 2019",
+      "price": "$ 800"
+    },
+    {
+      "img": "../../../../assets/images/whisky3.jpg",
+      "name": "Macallan Wisky 3",
+      "year": "8 June 2019",
+      "price": "$ 800"
+    },
+    {
+      "img": "../../../../assets/images/whisky2.jpg",
+      "name": "Macallan Wisky 2",
+      "year": "14 May 2019",
+      "price": "$ 14,000"
+    },
+
+    {
+      "img": "../../../../assets/images/whisky1.jpg",
+      "name": "Macallan Wisky 1",
+      "year": "25 Aug 2019",
+      "price": "$ 2500"
+    }
+  ]

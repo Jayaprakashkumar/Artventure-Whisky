@@ -1,0 +1,50 @@
+<div class="header-container"
+     [class.left]="position === 'normal'"
+     [class.right]="position === 'inverse'">
+  <div class="logo-containter">
+    <a (click)="toggleSidebar()" href="#" class="navigation"><i class="nb-menu"></i></a>
+    <div class="logo" (click)="goToHome()">Art<span>Venture</span></div>
+  </div>
+  <ngx-theme-switcher></ngx-theme-switcher>
+</div>
+
+<div class="header-container">
+  <!-- <ngx-layout-direction-switcher></ngx-layout-direction-switcher> -->
+
+  <div class="row">
+    <div class="col">
+      <div ngbDropdown class="d-inline-block">
+          <!-- <i class="fas fa-wine-bottle"></i> -->
+          
+          
+        <button class="btn btn-outline-primary menu-button" id="dropdownForm1" ngbDropdownToggle><nb-action class="control-item" icon="nb-keypad"></nb-action></button>
+        <div ngbDropdownMenu aria-labelledby="dropdownForm1" class="nav-menu-list">
+        <ul class="menu-list-items">
+          <li *ngFor="let x of menuList" (mouseenter)="onMouseOver(x.title)"><nb-action class="control-item" [icon]="x.icon"></nb-action><p>{{x.title}}</p></li>
+        </ul>
+        <div class="details">
+            Description: <p>{{Description}}</p>
+        </div>
+          
+        <div>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nb-actions
+    size="medium"
+    [class.right]="position === 'normal'"
+    [class.left]="position === 'inverse'">
+    <nb-action *nbIsGranted="['view', 'user']" >
+      <!-- <span (click)="logout()"></span> -->
+      <nb-user [nbContextMenu]="userMenu" [name]="user?.name" (click)="logout()" [picture]="user?.picture"></nb-user>
+    </nb-action>
+    <nb-action class="control-item" disabled icon="nb-notifications"></nb-action>
+    <nb-action class="control-item" icon="nb-email"></nb-action>
+    <nb-action class="control-item">
+      <nb-search type="rotate-layout" (click)="startSearch()"></nb-search>
+    </nb-action>
+  </nb-actions>
+</div>
